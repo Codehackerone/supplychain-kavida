@@ -6,7 +6,8 @@ Contains EDA, Training and a fully dockerized FastAPI backend for a article clas
 
 ### Hosted at http://54.254.8.19:8000/ (AWS EC2 - 2xlarge instance)
 
-`curl -X 'POST' \
+```
+  curl -X 'POST' \
   'http://localhost:8000/predict/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
@@ -14,7 +15,8 @@ Contains EDA, Training and a fully dockerized FastAPI backend for a article clas
   "title": "Sample title text",
   "paragraph": "Sample paragraph content",
   "timestamp_seconds": 1669788240.0
-}' `
+  }' 
+``` 
 
 
 # File structure
@@ -29,7 +31,7 @@ Contains EDA, Training and a fully dockerized FastAPI backend for a article clas
 ## uvicorn
 
 - `pip install -r requirements.txt`
-- `uvicorn src.main:app --reload`
+- `uvicorn run_server:app --reload`
 
 ## Docker
 
